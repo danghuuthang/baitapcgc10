@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input id='input' type=""></td>
+
+            <td> <select id="currencyFrom">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select></td>
+            <td> <select id="currencyTo">
+                    <option value='USD'>USD</option>
+                    <option value="VND">VND</option>
+                </select></td>
+        </tr>
+    </table>
+    <div id='ketqua'> kết quả :</div>
+    <button onclick="chuyen()">Convert</button>
+    <script>
+        function chuyen() {
+            x = document.getElementById('input').value;
+            if (currencyFrom.value == 'USD' && currencyTo.value == 'VND') {
+                alert(x*23000+'VND')
+            }
+            if(currencyFrom.value=='USD' && currencyTo.value=='USD'){
+                alert(x+"USD")
+            }
+            if(currencyFrom.value=='VND' && currencyTo.value=='VND'){
+                alert(x+"VND")
+            }
+            if(currencyFrom.value=='VND' && currencyTo.value=='USD'){
+                alert(x/23000+'USD')
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

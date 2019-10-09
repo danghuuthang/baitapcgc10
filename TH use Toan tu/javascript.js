@@ -1,0 +1,18 @@
+let inputWidth;
+let inputheight;
+    inputWidth= prompt("enter the width:");
+    inputheight= prompt("enter the height:");
+    document.write('enter the width');
+    document.write('<br/>');
+    document.write(inputWidth);
+    document.write('<br/>');
+    document.write('enter the height');
+    document.write('<br/>');
+    document.write(inputheight);
+    document.write('<br/>');
+let width=parseInt(inputWidth);
+let height=parseInt(inputheight);
+let area = width*height;
+    document.write('The area is:');
+    document.write('<br/>');
+    document.write(area);
