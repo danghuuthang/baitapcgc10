@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id='result' action=""></form>
+    <script>
+        var userName = prompt('Who is there')
+        if (userName == 'Admin') {
+            {
+            var password = prompt('Password')
+            if (password == 'TheMaster') {
+                document.getElementById('result').innerHTML = 'Welcome'
+            } else if (password == 'Null') {
+                document.getElementById('result').innerHTML = 'Canceled'
+            }
+            else {
+                document.getElementById('result').innerHTML = 'Wrong password.'
+            }
+        }
+        }
+        else if (userName == 'null') {
+            document.getElementById('result').innerHTML = 'Canceled'
+        } else {
+            document.getElementById('result').innerHTML = "I don't know you"
+
+        }
+    </script>
+</body>
+
+</html>

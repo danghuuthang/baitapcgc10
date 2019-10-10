@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>Calculator</h2>
     <input id='input1' type =''> 
     <input id='input2' type =''>
     <br>
@@ -14,38 +15,29 @@
     <button onclick= sub()>Subtraction(-)</button>
     <button onclick= mul()>Multiplication(X)</button>
     <button onclick= div()>Division(/)</button>
+    <form id='message'action=""></form>
     <script>
         function  add(){
-            a=document.getElementById('input1').value
-            b=document.getElementById('input2').value
-            a=parseFloat(a)
-            b=parseFloat(b)
-            x=a+b;
-            alert(x)
+            a=parseFloat(document.getElementById('input1').value)
+            b=parseFloat(document.getElementById('input2').value)
+            document.getElementById('message').innerHTML='The result:'+(a+b)
+            
         }
         function  sub(){
-            a=document.getElementById('input1').value
-            b=document.getElementById('input2').value
-            a=parseFloat(a)
-            b=parseFloat(b)
-            x=a-b;
-            alert(x)
+            a=parseFloat(document.getElementById('input1').value)
+            b=parseFloat(document.getElementById('input2').value)
+            document.getElementById('message').innerHTML='The result:'+(a-b)
+            
         }
         function  mul(){
-            a=document.getElementById('input1').value
-            b=document.getElementById('input2').value
-            a=parseFloat(a)
-            b=parseFloat(b)
-            x=a*b;
-            alert(x)
+            a=parseFloat(document.getElementById('input1').value)
+            b=parseFloat(document.getElementById('input2').value)
+            document.getElementById('message').innerHTML='The result:'+(a*b)
         }
         function  div(){
-            a=document.getElementById('input1').value
-            b=document.getElementById('input2').value
-            a=parseFloat(a)
-            b=parseFloat(b)
-            x=a/b;
-            alert(x)
+            a=parseFloat(document.getElementById('input1').value)
+            b=parseFloat(document.getElementById('input2').value)
+            document.getElementById('message').innerHTML='The result:'+(a/b)
         }
 
     </script>
