@@ -7,8 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-        <body onload="docReady()">
-        <img id="nobita" src="images/nobita.jpg" style="position:absolute;left:0; top:0;" height="200" width="180"/>
-    <script src="udlr.js"></script>
+    <script>
+        let i=1;
+        let j=0;
+        while (i<=100){
+            while (j<i){
+                document.write("<hr width = " +j + "%>");
+            j++;
+            }
+            i++
+        }
+        
+    </script>
 </body>
 </html>

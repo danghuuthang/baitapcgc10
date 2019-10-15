@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Bài 2</h2>
+    <input id='input1' type="text">
+    <input onclick="flash()" type="submit" value="Submit">
+    <form id='rs2' action=""></form>
+    <script>
+        function flash() {
+            var x = document.getElementById('input1').value
+            if (x > 16) {
+                document.getElementById('rs2').innerHTML = ('Đủ tuổi');
+            } else {
+                document.getElementById('rs2').innerHTML = ('Chưa Đủ tuổi');
+            }
+        }
+    </script>
+    <h2>Bài 3</h2>
+    <script>
+        let n = parseFloat(prompt('Nhập số:'));
+        if (n>0) {
+            alert(n + 'lớn hơn 0')
+        }else
+            alert(n + 'nhỏ hơn 0')
+    </script>
+    <h2>Bài 4</h2>
+    <script>
+    let x = parseFloat(prompt('Nhập x,Điểm thi giữa kì:'));
+    let y = parseFloat(prompt('Nhập y, Điểm thi cuối kì:'));
+    let z = parseFloat(prompt('Nhập z:'));
+    if (x<y){
+        x=y; 
+        if (x<z){
+            x=z;
+        }
+    }
+    if (((x+y)/2)>8){
+        alert('Giỏi')
+    }
+    alert ('Số lớn nhất là '+ x);
+    
+
+    </script>
+</body>
+
+</html>
