@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function display(w,h){
+        let row = '';
+        for (let i = 0; i <= h; i++) {
+            for (let j = 0; j <= w; j++) {
+                if ( i == 0 || i == h ){ 
+                row+='*'; 
+                } else {
+                    if ( j == 0 || j == w){
+                        row+='*';
+                    } else {
+                        row+='&nbsp&nbsp;';
+                    }
+                }
+                }
+            row += '<br>';
+            }
+            document.write(row);
+        }
+        display(21,21);
+    </script>
+</body>
+
+</html>

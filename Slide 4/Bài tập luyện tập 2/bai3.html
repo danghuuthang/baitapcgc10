@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function display1() {
+            let row = '';
+            for (let i = 0; i <= 5; i++) {
+                for (let j = 1; j <= i; j++) {
+                    row += '*';
+                }
+                row += '<br>';
+            }
+            document.write(row)
+        }
+        function display2() {
+            let row = '';
+            for (let i = 0; i <= 5; i++) {
+                for (let j = 5; i < j; j--) {
+                    row += '*';
+                }
+                row += '<br>';
+            }
+            document.write(row)
+        } 
+        function display3() {
+            let row ='';
+            for (let i = 0; i <= 5; i++) {
+                for (let j = 5; i < j; j--) {
+                    row += '&nbsp&nbsp;';
+                }
+                for (let k=1;k<=i;k++){
+                    row += '*';
+                }
+                row+= '<br>';
+            }
+            document.write(row);
+        }
+        function display4() {
+            let row = '';
+            for (let i = 0; i <= 5; i++) {
+                for (let j = 1; j <= i; j++) {
+                    row += '&nbsp&nbsp;';
+                }
+                for (let k=5; k>i;k--){
+                    row += '*';
+                }
+                row += '<br>';
+            }
+            document.write(row)
+        }
+        display1();
+        document.write('<br>');
+        display2();
+        display3();
+        document.write('<br>');
+        display4();
+    </script>
+
+</body>
+
+</html>
