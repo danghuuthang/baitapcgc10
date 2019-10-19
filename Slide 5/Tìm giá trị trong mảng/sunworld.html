@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let va = prompt("Enter a number: ");
+        let x = [2, 3, 5, 7, 5, -9, 0, -1];
+        let e = '';
+        let dem = 0;
+        for (let i = 0; i < x.length; i++) {
+            if (x[i] == va) {
+                e += i + '&nbsp&nbsp;';
+                dem++;
+            }
+        }
+        switch (dem) {
+            case 0:
+                document.write('Giá trị ' + va + ' không có trong mảng');
+                break;
+            default:
+                document.write('Giá trị ' + va + ' nằm ở vị trí:' + e + 'của mảng');
+                break;
+        }
+    </script>
+</body>
+
+</html>
