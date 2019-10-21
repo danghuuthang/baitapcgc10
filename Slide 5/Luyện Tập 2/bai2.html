@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num;
+        num = parseInt(prompt('Nhập num:'));
+        let a = [num];
+        for (let i = 0; i < num; i++) {
+            a[i] = prompt('Nhập giá trị cho phần tử thứ:' + i);
+            document.write('Array[' + i + ']=' + a[i] + '<br/>');
+        }
+            b=a.reverse();
+        let e='';
+        for (let j=0;j<b.length;j++){
+            e+=b[j];
+        }
+        console.log(b);
+        console.log(e);
+    </script>
+</body>
+</html>

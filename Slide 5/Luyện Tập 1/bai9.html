@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num;
+        num = parseInt(prompt('Nhập num:'));
+        let a = [num];
+        for (let i = 0; i < num; i++) {
+            a[i] = parseFloat(prompt('Nhập giá trị cho phần tử thứ:' + i));
+            document.write('Array[' + i + ']=' + a[i] + '<br/>');
+        }
+        let num1;
+        num1 = parseInt(prompt('Nhập num1:'));
+        let b = [num1];
+        for (let j = 0; j < num1; j++) {
+            b[j] = parseFloat(prompt('Nhập giá trị cho phần tử thứ:' + j));
+            document.write('Array1[' + j + ']=' + b[j] + '<br/>');
+        }
+        let c = a.concat(b);
+        console.log(c.toString());
+    </script>
+</body>
+
+</html>

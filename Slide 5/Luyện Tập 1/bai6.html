@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num;
+        num = parseInt(prompt('Nhập num:'));
+        let array = [num];
+        let num1;
+        for (let i = 0; i < num; i++) {
+            array[i] = num1 = parseFloat(prompt('Nhập giá trị cho phần tử thứ:' + i));
+            document.write('Array[' + i + ']=' + array[i] + '<br/>');
+        }
+        let V;
+        let dem = 0;
+        let e='0';
+
+        V = parseFloat(prompt('Nhập V:'));
+        for (let j = 1; j < array.length; j++) {
+            if (V == array[j]) {
+                e += j + '&nbsp&nbsp;';
+                dem = 1;
+            }
+        }
+        switch (dem) {
+            case 1:
+                document.write(V + ' is in the array : '+ e);
+                break;
+            default:
+                document.write(V + ' not is in the array ');
+                break;
+        }
+
+    </script>
+</body>
+
+</html>

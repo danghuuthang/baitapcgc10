@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+                let num;
+                maxArray=[];
+                num = parseInt(prompt('Bạn muốn mảng có bao nhiêu phần tử:?'));
+                let cout;
+                cout = parseFloat(prompt('nhập giá trị cho phần tử 0:'));
+                maxArray[0]=cout;
+                max=maxArray[0];
+                let index=0;
+                let vitri;
+                for (let i = 1; i < num ; i++){
+                    let num1
+                    num1 = parseFloat(prompt('phần tử thứ:'+i));
+                    maxArray[i]=num1;
+                    if (max<=maxArray[i]){
+                        max=maxArray[i];
+                        vitri=i;
+                    }
+               }
+               }
+               document.write('Giá trị lớn nhất là='+max+'Ở vị trí'+vitri);
+            </script>
+</body>
+</html>

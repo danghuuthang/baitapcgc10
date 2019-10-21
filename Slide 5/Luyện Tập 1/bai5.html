@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num;
+        num=parseInt(prompt('Nhập Num'));
+        let num1=[num];
+        let dem=0;
+        let e='';
+        for (let i = 0; i < num ; i++){ 
+            num1[i] = parseFloat(prompt('phần tử thứ:'+i));
+            if (num1[i]<=0) {
+                e+=num1[i]+ '&nbsp&nbsp;';
+                dem++;
+            }
+        }
+        document.write('Những num nguyên âm là:' +e+'<br/>');
+        document.write('Có'+dem+'phần tử nguyên âm');
+    </script>
+</body>
+</html>

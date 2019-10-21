@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num;
+        num = parseInt(prompt('Nhập num:'));
+        let array = [num];
+        let num1;
+        for (let i = 0; i < num; i++) {
+            array[i] = num1 = parseFloat(prompt('Nhập giá trị cho phần tử thứ:' + i));
+        }
+        console.log(array.join());
+        let V;
+        /* let Array1=[];
+        V = parseFloat(prompt('Nhập V:'));
+        for (let j = 0; j < array.length; j++) {
+            if (V === array[j]) {
+            }else{
+                Array1.push(array[j]);
+            }
+        }
+        console.log(Array1.join());*/
+        console.log(array.toString());
+        V = prompt('Nhập V:');
+        for (let j = 0; j <array.length-1; j++) {
+            if (V==array[j]){
+                array.slice(j,1);
+            }
+        }
+    </script>
+</body>
+
+</html>
