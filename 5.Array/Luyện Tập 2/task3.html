@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num;
+        num = parseInt(prompt('Enter The Number:'));
+        let a = [num];
+        for (let i = 0; i < num; i++) {
+            a[i] = prompt('Enter the value for the element:' + i);
+            document.write('Array[' + i + ']=' + a[i] + '<br/>');
+        }
+        let e = '';
+        let count = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (!isNaN(a[i])) {
+                count++;
+                e += a[i] + '&nbsp&nbsp;';
+            }
+        }
+        document.write('Have a total of ' + count + ' character the number <br>');
+        document.write('Character number has in aray:' + e);
+    </script>
+</body>
+
+</html>

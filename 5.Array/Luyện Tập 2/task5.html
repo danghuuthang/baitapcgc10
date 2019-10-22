@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let string1;
+    let string2;
+        string1=prompt('Enter the string:');
+        string2=prompt('Enter the string:');
+        document.write('String 1 is: '+string1+'<br>');
+        document.write('String 2 is: '+string2+'<br>');
+        if (string1.length!=string2.length){
+            document.write('Two String not equal')
+        }else{
+            for (let i=0;i<=string1.length;i++){
+                if (string1[i]===string2[i])
+                    equal=true;
+            }
+        }
+        if (equal===true){
+            document.write('Two string equal')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str;
+        str=prompt('Enter the string:');
+        document.write('String is: '+str+'<br>');
+        let count=1;
+        console.log(str.length);
+        for (let i=0;i<str.length;i++){
+            if (str[i] ===' '){
+                count++;
+            }
+        }
+        document.write('Have '+count+ 'character in array string')
+    </script>
+</body>
+</html>
