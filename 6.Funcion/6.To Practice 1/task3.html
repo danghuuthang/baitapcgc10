@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='result'></p>
+    <script>
+        function alertAndSumTwoNumber() {
+            let sum = 0;
+            if (first > second) {
+                alert('Number the first is greater than number the second')
+            } else {
+                sum = first + second;
+                document.getElementById('result').innerHTML = ('Sum two the number is: ' + sum);
+            }
+        }
+        let first = parseFloat(prompt('Enter The number first: '));
+        let second = parseFloat(prompt('Enter The number second: '));
+        alertAndSumTwoNumber();
+    </script>
+</body>
+
+</html>

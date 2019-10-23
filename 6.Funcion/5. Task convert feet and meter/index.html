@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>Convert Feet And Meter</h1>
+    <input id='input' type="text">
+    <select id="index1">
+        <option value="feets">Feets</option>
+        <option value="meters">Meters</option>
+    </select>
+    <select id="index2">
+        <option value="feets">Feets</option>
+        <option value="meters">Meters</option>
+    </select>
+    <input type="submit" value="SubMit" onclick="convert()">
+    <div id='result'>Result is:</div>
+    <script>
+        function convert() {
+            let index = document.getElementById('input').value;
+            if (index1.value == 'meters' && index2.value == 'feets') {
+                document.getElementById('result').innerHTML = (index + ' Meters = ' + index * 0.305 + ' Feets');
+            }
+            if (index1.value == 'feets' && index2.value == 'meters') {
+                document.getElementById('result').innerHTML = (index + ' Feets = ' + index * 3.279 + ' Meters');
+            }
+        }
+    </script>
+</body>
+
+</html>

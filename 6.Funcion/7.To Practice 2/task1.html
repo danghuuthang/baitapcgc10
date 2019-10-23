@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='index'></p>
+    <script>
+        function squareaNumber(number) {
+            return (number * number);
+        }
+        let result = parseFloat(prompt('Enter the number you want square '));
+        document.getElementById('index').innerHTML = ('Number you want square is ' + squareaNumber(result));
+    </script>
+</body>
+
+</html>

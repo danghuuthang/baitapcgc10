@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='index'></p>
+    <script>
+        function addOne(n) {
+            return n + 1;
+        }
+        let number = parseFloat(prompt('Enter the number you want add one:'));
+        let b = addOne(number);
+        document.getElementById('index').innerHTML = (b);
+    </script>
+</body>
+
+</html>

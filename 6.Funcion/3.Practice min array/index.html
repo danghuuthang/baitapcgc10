@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function inputArr() {
+            let s = parseInt(prompt('Enter The Number to the size of array:'));
+            return s;
+        }
+        function createarr(size) {
+            let arr = [];
+            for (let i = 0; i < size; i++) {
+                arr[i] = parseInt(prompt('arr[' + i + ']='))
+            }
+            return arr;
+        }
+        function minArr(arr) {
+            let min = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        function resultMinArr() {
+            let size = inputArr();
+            let arr = createarr(size);
+            let result = minArr(arr);
+            document.write('Min In Array is : ' +result);
+        }
+        resultMinArr();
+    </script>
+</body>
+
+</html>

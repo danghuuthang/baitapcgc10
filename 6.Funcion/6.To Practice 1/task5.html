@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='index'></p>
+    <script>
+        let array1 =["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function star(name) {
+            let count=0;   
+            for (let i=0;i<array1.length;i++) {
+                (name==array1[i])
+                if (name == array1[i]) {
+                    alert('Name Constellation you want: ' + name + ' Constellation in array 2 is: ' + array2[i]);
+                    count++;
+                } 
+            }
+            if (count==0){
+                    alert('Not found constellation you want seek')    
+                }
+        }
+        let nameStar = prompt('Enter the constellation you want seek ^^!');
+        star(nameStar);
+        
+    </script>
+</body>
+
+</html>
