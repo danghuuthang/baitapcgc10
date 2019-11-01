@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id='myCanvas' width="800px" height="768px" style="border"></canvas>
+    <script>
+        let Ractangle=function(width,height){
+            this.width=width;
+            this.height=height;
+            this.getWidth=function(){
+                return width;
+            }
+            this.getHeight=function(){
+                return height;
+            }
+            this.area=function(){
+                return  width*height;
+            }
+            this.circuit=function(){
+                return (width+height)*2;
+            }
+        }
+        function getRandomHex() {
+            return Math.floor(Math.random() * 255);
+        }
+        function getRandomColer() {
+            let red = getRandomHex();
+            let green = getRandomHex();
+            let blue = getRandomHex();
+            return "rgb(" + red + "," + blue + "," + green +")";
+        }
+        function painRactangle(){
+            let width=Math.floor(Math.random()*500);
+            let height=Math.floor(Math.random()*500);
+            let color = getRandomColer();
+            let ractangle= new Ractangle(width,height);
+            document.write('Width= '+ width+ ' Height = '+height+'-----')
+            document.write('Area= '+ ractangle.area() + ' Circuit =' + ractangle.circuit());
+            let ctx=document.getElementById('myCanvas').getContext('2d');
+            ctx.fillStyle = color;
+            ctx.fillRect(0,0,ractangle.width,ractangle.height);
+        }
+        painRactangle();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <tr>
+        <td>
+            <p id='index1'></p>
+            <p id='index2'></p>
+        </td>
+        <td>
+            <p id='index3'></p>
+            <p id='index4'></p>
+        </td>
+        <td>
+            <p id='index5'></p>
+        </td>
+    </tr>
+    <input type="button" value="Adam Eat" onclick="eat(adam)">
+    <input type="button" value="Eva Eat" onclick="eat(eva)">
+    <script>
+        let Apple = function (weight) {
+            this.weight = weight;
+            this.decrease = function () {
+                this.weight--;
+            }
+            this.getWeight = function () {
+                return weight;
+            }
+        }
+        let Human = function (name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+            this.isMale = function () {
+                if (this.gender) {
+                    return 'male';
+                } else {
+                    return 'Female';
+                }
+            }
+            this.checkApple = function () {
+                return Apple.weight;
+            }
+            this.eat = function () {
+                this.weight++;
+            }
+            this.say = function () {
+                return console.log('Tao ngon');
+            }
+            this.setWeight = function () {
+                this.weight = weight;
+                return this.weight;
+            }
+        }
+        let apple = new Apple(10);
+        let adam = new Human('Adam', true, 120);
+        document.getElementById('index1').innerHTML = ('Name: ' + adam.name );
+        document.getElementById('index2').innerHTML = ('Weight of Adam: ' + adam.weight);
+        let eva = new Human('Eva', false, 90);
+        document.getElementById('index3').innerHTML = ('Name: ' + eva.name );
+        document.getElementById('index4').innerHTML = ('Weight of Eva: ' + eva.weight);
+        document.getElementById('index5').innerHTML=('Weight Apple = ' + apple.weight);
+        function eat(people) {
+            if (apple.weight > 0) {
+                people.eat();
+                apple.decrease();
+                people.say();
+            } else {    
+                alert('Het tao roi');
+            }
+            if (people==adam){ 
+            document.getElementById('index2').innerHTML=('Weight of '+people.name+ ': ' + people.weight);
+            } else {
+                document.getElementById('index4').innerHTML=('Weight of '+people.name+ ': ' + people.weight);
+            }
+            document.getElementById('index5').innerHTML=('Weight Apple = ' + apple.weight)
+        }
+    </script>
+</body>
+</html>

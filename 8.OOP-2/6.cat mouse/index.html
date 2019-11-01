@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+        <body>
+            <form >
+                <p id="meo"></p>
+                <p id="khoiluong1"></p>
+                <p id= "chuot"></p>
+                <p id="khoiluong2"></p>
+        
+                <input type="button" value="catch" onclick="catchRat()">
+            </form>
+            <script>
+                class Rat{
+                    constructor(_name, _weight, _speed, _status, _voice) {
+                        this.name = _name;
+                        this.weight = _weight;
+                        this.speed = _speed;
+                        this.status = _status;
+                        this.voice = _voice;
+                    }
+                    RatName() {
+                        return this.name;
+                    }
+                    RatWeight() {
+                        return this.weight;
+                    }
+                    DecreaseRat() {
+                        this.weight = 0;
+                        return this.weight;
+                    }
+                    RatSpeed() {
+                        return this.speed;
+                    }
+                    RatStatus() {
+                        if (live) {
+                            return ("im here");
+                        } else {
+                            return ("..........");
+                        }
+                    }
+                    RatVoice() {
+                        return ("bắt bố này nè mèo");
+                    }
+                }
+                class Cat{
+                    constructor(_name, _weight, _speed, _voice, _catch, _eat) {
+                        this.name = _name;
+                        this.weight = _weight;
+                        this.speed = _speed;
+                        this.voice = _voice;
+                        this.catch = _catch;
+                        this.eat = _eat;
+                    }
+                    CatName() {
+                        return this.name;
+                    }
+                    CatWeight() {
+                        return this.weight
+                    }
+                    CatSpeed() {
+                        return this.speed;
+                    }
+                    CatVoice() {
+                        return "ngon"
+                    }
+                    CatEat() {
+                        this.weight = this.weight + Rat.weight
+                        return this.weight ;
+                    }
+                   
+                }
+                var chuot = new Rat("jerry", 3, 30, true);
+                document.getElementById("chuot").innerHTML= "tên " + chuot.RatName() + "<br>"+ " tốc độ " + chuot.RatSpeed()
+                document.getElementById("khoiluong2").innerHTML = "khối lượng " + chuot.RatWeight()
+                var meo = new Cat("tom", 15, 50);
+                
+                document.getElementById("meo").innerHTML= "tên " + meo.CatName() + "<br>" + "tốc độ " + meo.CatSpeed()
+                document.getElementById("khoiluong1").innerHTML = "khối lượng" + meo.CatWeight()
+                function catchRat() {
+                    if (meo.speed >chuot.speed) {
+                        return alert( meo.weight += chuot.weight);                        
+                    }
+                }   
+            </script>
+        </body>
+        </html>
+</body>
+</html>

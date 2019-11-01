@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Temperature=function(celsius){
+            this.celsius=celsius;
+            this.fahrenheit=function(){
+                return (celsius*(9/5)+32);
+            }
+            this.kenvin=function(){
+                 return(celsius+273);
+            }
+        }
+        let celsius=+prompt('Enter The Celsius:');
+        while(celsius<-273){
+            celsius=+prompt('Celsius Not < 273 Celsius:');
+        }
+        let temperature=new Temperature(celsius);
+        document.write('Celsius= '+ celsius+ '<br>');
+        document.write('Fahrenheit= '+temperature.fahrenheit()+'<br>');
+        document.write('Kenvin = '+temperature.kenvin());
+    </script>
+</body>
+</html>
