@@ -19,7 +19,7 @@
   </style>
 </head>
 <body>
-<canvas width="400" height="400" id="game"></canvas>
+<canvas width="800" height="800" id="game"></canvas>
 <script>
  //Ở đây ta tạo ra bộ khung chứa game
 var canvas = document.getElementById('game');
@@ -105,7 +105,7 @@ function loop() {
   });
 }
 //bắt sự kiện bàn phím ấn xuống
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown',   {
   // lọc sự kiện keydown để rắn không di ngược lại
   if (e.which === 37 && snake.dx === 0) {
     snake.dx = -grid;

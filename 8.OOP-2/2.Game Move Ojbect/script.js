@@ -35,17 +35,20 @@ function Hero(image, top, left, size){
   function start(){
       const width=window.innerWidth - hero.size;
       const height=window.innerHeight - hero.size;
-    if(hero.left < width && hero.top<=20){
-      hero.moveRight();}
-    if(hero.left >= width  && hero.top <height){
-        hero.moveDown();}
-    if(hero.left < window.innerWidth - hero.size){
-        hero.moveRight();}
-    if(hero.left < window.innerWidth - hero.size){
-        hero.moveRight();}
+      if (hero.left < width && hero.top <= 20) {
+        hero.moveRight();
+      }
+      if (hero.left >= width && hero.top < height) {
+      hero.moveDown()
+      }
+      if (hero.left > 30 && hero.top >= height){
+        hero.moveLeft()
+    }
+    if (hero.left <= 30 && hero.top >20){
+        hero.moveTop()
+    }
     document.getElementById('game').innerHTML = hero.getHeroElement();
     setTimeout(start, 25)
   }
-
-  
   start();
+  
