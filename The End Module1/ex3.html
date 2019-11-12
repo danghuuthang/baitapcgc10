@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function inputPerfect() {
+            let num;
+            do {
+                num = prompt('Enter the number:');
+            }
+            while (isNaN(num) || (parseInt(num) < num));
+            return num;
+        }
+        function isPerfectNumber(perfect) {
+            let sum = 0;
+            for (let i = 1; i < perfect / Math.sqrt(2); i++) {
+                if (perfect % i == 0) {
+                    sum += i;
+                }
+            }
+            result = (sum == perfect && prime != 0 ) ? true : false;
+            return (result);
+        }
+        function main() {
+            let perfect = inputPerfect();
+            result = isPerfectNumber(perfect);
+            result ? alert(perfect + ' is perfect number') : alert(perfect + ' is not perfect number');
+        }
+        main();
+    </script>
+</body>
+
+</html>

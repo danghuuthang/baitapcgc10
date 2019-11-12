@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function inputLength() {
+            let num;
+            do {
+                num = prompt('Enter the number:');
+            }
+            while (isNaN(num) || (parseInt(num) < num) || (num <= 0));
+            return num;
+        }
+        function inputArray(num) {
+            let Arr = [num];
+            for (let i = 0; i < num; i++) {
+                Arr[i] = parseFloat(prompt('Nhập giá trị cho phần tử thứ:' + i));
+                document.write('Array[' + i + ']=' + Arr[i] + '<br/>');
+            }
+            return Arr;
+        }
+        function tryAddFromArray(Arr) {
+            let index;
+            do {
+                index = prompt('Enter the number you want Add (index):');
+            }
+            while (isNaN(index) || (parseInt(index) < index));
+            let value = parseFloat(prompt('Enter the value for Array you want add(Value):'));
+            for (let i = 0; i < Arr.length; i++) {
+                if (i == index) {
+                    for (let j = Arr.length; j >= i; j--) {
+                        Arr[j] = Arr[j - 1];
+                        if (j == index) {
+                            Arr[index] = value;
+                        }
+                    }
+                }
+            }
+            console.log(Arr.length);
+            console.log(Arr);
+        }
+        function main() {
+            let num = inputLength();
+            let Arr = inputArray(num);
+            tryAddFromArray(Arr);
+        }
+        main();
+    </script>
+</body>
+
+</html>

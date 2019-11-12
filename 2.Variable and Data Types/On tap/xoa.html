@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function inputLength() {
+            let num;
+            do {
+                num = prompt('Enter the number:');
+            }
+            while (isNaN(num) || (parseInt(num) < num) || (num <= 0));
+            return num;
+        }
+        function inputArray(num) {
+            let Arr = [num];
+            for (let i = 0; i < num; i++) {
+                Arr[i] = parseFloat(prompt('Nhập giá trị cho phần tử thứ:' + i));
+                document.write('Array[' + i + ']=' + Arr[i] + '<br/>');
+            }
+            return Arr;
+        }
+        function checkAdd(Arr) {
+            let number;
+            do {
+                number = prompt('Enter the number you want delete:');
+            }
+            while (isNaN(number) || (parseInt(number) < number) || (number <= 0));
+            for (let i = 0; i < Arr.length; i++) {
+                if (i == number) {
+                    for (let j = i; j < Arr.length; j++) {
+                        Arr[j] = Arr[j + 1];
+                    }
+                }
+            }
+            Arr.pop();
+            console.log(Arr);
+        }
+        function checkDelete(Arr) {
+            Arr.push();
+            let number1;
+            do {
+                number1 = prompt('Enter the number you want Add:');
+            }
+            while (isNaN(number1) || (parseInt(number1) < number1) || (number1 <= 0));
+            let index;
+            index = prompt('Enter the value for Array you want add:')
+            for (let i = 0; i < Arr.length; i++) {
+                if (i==number1) {
+                    for (let j=Arr.length;j=i;j--){
+                        Arr[j]=Arr[j-1];
+                    }
+                    Arr[number1] = index;
+                }
+                console.log(Arr)
+            }
+        }
+        function main() {
+            let num = inputLength();
+            let Arr = inputArray(num);
+            checkDelete(Arr);
+        }
+        main();
+    </script>
+</body>
+
+</html>

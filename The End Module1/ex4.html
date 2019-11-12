@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <img style="display:none" width="100" height="100" src="heo.jpg" alt="" id="imgcanvasanimal" />
+    <canvas id="canvas" width="300px" height="200px" style="border: 2px solid pink;"></canvas>
+    <script>
+        class Animal {
+            constructor(image, x, y, width, height,name) {
+                this.image = image;
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.name=name;
+            }
+            render(canvas) {
+                canvas.drawImage(this.image, this.x, this.y, this.width, this.height);
+            }
+        }
+        let imageAnimal = new Image();
+        imageAnimal.src = document.getElementById('imgcanvasanimal').src;
+        let ctx = document.getElementById("canvas");
+        let canvas = ctx.getContext("2d");
+        window.onload = function () {
+            let pig = new Animal(imageAnimal, 50, 50, 200, 100,"heo");
+            pig.render(canvas);
+        };
+    </script>
+</body>
+
+</html>

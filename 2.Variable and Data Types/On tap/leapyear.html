@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function inputPrime() {
+            do {
+                let year = prompt('Enter the number:');
+            }
+            while (isNaN(year) || (parseInt(year) < year) || year <= 0);
+            return year;
+        }
+        function checkLeapYear(year) {
+            let isLeapYear=false;
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+                        isLeapYear = true;
+                    }
+                } else {
+                    isLeapYear = true;
+                }
+            }
+            return isLeapYear;
+        }
+        function main(){
+            year=inputPrime();
+            result=checkLeapYear(year);
+            result?alert('Leap Year'):alert('Not Leap Year');
+        }
+        main();
+    </script>
+</body>
+
+</html>
