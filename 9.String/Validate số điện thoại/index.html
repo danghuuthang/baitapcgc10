@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Code(str){
+           var regexp= /^[_a-z0-9]{6,}$/;
+            return regexp.test(str);
+           
+        };
+        var code ="ad@gmail.vn"
+        var code2= "123456"
+        alert(Code(code));
+        alert(Code(code2));
+    </script>
+</body>
+</html>
