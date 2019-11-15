@@ -1,5 +1,5 @@
 let CAR_X = 500;
-let CAR_SPEED = 10;
+let CAR_SPEED = 5;
 let CAR_WIDTH = 80;
 let CAR_HEIGHT = 80;
 let CAR_FUEL = 1000;
@@ -29,7 +29,7 @@ let canvas = document.getElementById('canvasId');
 let midWidth = (canvas.width / 2) - 70;
 
 //táº¡o áº£nh Ä‘á»ƒ váº½!
-let imgRao= document.getElementById('hangraoId')
+let imgRao= document.getElementById('hangraoId');
 let imgCar = document.getElementById('carId');
 let imgCone = document.getElementById('coneId');
 let imgTree=document.getElementById('treeId')
@@ -129,7 +129,7 @@ document.addEventListener('keydown', function (event) {
 
 function createCone2() {
     let randomX = Math.round(Math.random() * 350) + 300;
-    let rao = new TrafficCone(imgRao, randomX, CONE_Y, newSpeed, CONE_WIDTH, CONE_HEIGHT);
+    let rao = new TrafficCone(imgRao, randomX, CONE_Y, newSpeed+2, CONE_WIDTH, CONE_HEIGHT);
     mutilCone.push(rao);
 }
 function createCone1() {
@@ -152,7 +152,6 @@ function createFuel() {
     mutilFuel.push(fuel);
 
 }
-
 //táº¡o 1 Bird:
 function createBird() {
     let randomY = Math.round(Math.random() * 400) + 50;
@@ -174,7 +173,7 @@ function main() {
     }
     if (j % level2 == 0) { 
         createCone2();
-    }
+    }    
     if (j % level == 0) { 
         createCone();
         
@@ -188,6 +187,7 @@ function main() {
             console.log('Fuel Out');
             console.log('mutilFuel: ' + mutilFuel);
         }
+
         if (birdRandom % 26 == 0) {
             createBird();
             console.log('Bird Out');
@@ -277,25 +277,6 @@ function showScore() {
 
 }
 
-function showCoords(event) {
-    let x = event.clientX;
-    let y = event.clientY;
-    let coords = "X coords: " + x + ", Y coords: " + y;
-
-    let shootedIndex = shootBirdIndex;
-
-    if (x < (mutilBird[shootedIndex].x + 50) && mutilBird[shootedIndex].x < x) {
-        if (y < mutilBird[shootedIndex].y + 50 && mutilBird[shootedIndex].y < y) {
-            console.log('SHOOT!!!!!!')
-
-            mutilBird[shootedIndex].drawBangBird(canvas);
-            score += 100;
-
-            mutilBird.splice(shootedIndex, 1);
-        }
-    }
-}
-
 
 // // taget: chua biet lam
 // function taget(event) {
@@ -309,14 +290,14 @@ function showCoords(event) {
 function end() {
 
     if (car.fuel < 0) {
-        
+        ctx.drawImage(endGameFuel, 0, 0);
         // ctx.fontSize = '30px';
         ctx.fillText(' YOUR SCORE IS: ' + sumScore, 340, 150);
         clearInterval(runGame);
     }
 
     if (car.hit == true) {
-
+        ctx.drawImage(endGame, 0, 0);
         // ctx.fontSize = '30px';
         ctx.fillText(' YOUR SCORE IS: ' + sumScore, 370, 150);
         clearInterval(runGame);
